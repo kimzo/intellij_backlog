@@ -64,12 +64,7 @@ abstract class BacklogGitURLAction extends AnAction {
             return null;
 
         String remoteUrl = ((GitRemote) remotes.toArray()[0]).getFirstUrl();
-        // nulab@nulab.git.backlog.jp:/BLG/backlog-scala.git
-        // https://nulab.backlog.jp/git/BLG/backlog-scala.git
-
         remoteUrl = remoteUrl.replace(".git.", ".").replace(".git", "/");
-        // nulab@nulab.backlog.jp:/BLG/backlog-scala/
-        // https://nulab.backlog.jp/git/BLG/backlog-scala/
 
         if (remoteUrl.startsWith("https://")) {
 
