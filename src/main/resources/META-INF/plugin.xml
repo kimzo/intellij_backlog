@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>kimzo.BacklogPlugin</id>
+    <name>BacklogPlugin</name>
+    <vendor email="kimzo351@gmail.com" url="https://github.com/kimzo/intellij_backlog">kimzo</vendor>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+
+        <group id="Backlog.Group.Main" text="Backlog Action"
+               description="Group of Backlog Action"
+               popup="false">
+            <!-- エディタ上で右クリックした時に現れるメニューの最後に追加 -->
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+
+            <!-- 実装したクラスとのマッピング -->
+            <action id="Backlog.OpenAtBacklog" class="OpenAtBacklogGitURLAction" text="Open at Backlog"
+                    description="Illustrates how to plug an action in"/>
+            <action id="Backlog.PullRequest" class="CreatePullRequestGitURLAction" text="Create PullRequest"
+                    description="Illustrates how to plug an action in"/>
+        </group>
+
+    </actions>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
+</idea-plugin>
