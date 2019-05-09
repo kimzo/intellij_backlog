@@ -1,7 +1,9 @@
 <idea-plugin>
     <id>kimzo.BacklogPlugin</id>
-    <name>BacklogPlugin</name>
+    <name>Backlog Git Page</name>
     <vendor email="kimzo351@gmail.com" url="https://github.com/kimzo/intellij_backlog">kimzo</vendor>
+    <description>Backlog git page integration plugin. Open file / Create PullRequest at Backlog. https://backlog.com</description>
+    <change-notes>Initial release of the plugin.</change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
