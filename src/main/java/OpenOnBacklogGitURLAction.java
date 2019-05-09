@@ -4,8 +4,8 @@ import com.intellij.openapi.ide.CopyPasteManager;
 
 import java.awt.datatransfer.StringSelection;
 
-public class OpenAtBacklogGitURLAction extends BacklogGitURLAction {
-    public OpenAtBacklogGitURLAction() {
+public class OpenOnBacklogGitURLAction extends BacklogGitURLAction {
+    public OpenOnBacklogGitURLAction() {
         super("OpenAtBacklog");
     }
 

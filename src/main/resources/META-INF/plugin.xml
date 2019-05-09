@@ -4,6 +4,7 @@
     <vendor email="kimzo351@gmail.com" url="https://github.com/kimzo/intellij_backlog">kimzo</vendor>
     <description>Backlog git page integration plugin. Open file / Create PullRequest at Backlog. https://backlog.com</description>
     <change-notes>Initial release of the plugin.</change-notes>
+    <idea-version since-build="183"/>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
@@ -18,13 +19,14 @@
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
 
             <!-- 実装したクラスとのマッピング -->
-            <action id="Backlog.OpenAtBacklog" class="OpenAtBacklogGitURLAction" text="Open at Backlog"
+            <action id="Backlog.OpenAtBacklog" class="OpenOnBacklogGitURLAction" text="Open at Backlog"
                     description="Illustrates how to plug an action in"/>
             <action id="Backlog.PullRequest" class="CreatePullRequestGitURLAction" text="Create PullRequest"
                     description="Illustrates how to plug an action in"/>
         </group>
 
     </actions>
+
 
     <depends>com.intellij.modules.platform</depends>
     <depends>Git4Idea</depends>
