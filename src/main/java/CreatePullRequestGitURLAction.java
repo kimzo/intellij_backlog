@@ -6,7 +6,7 @@ import java.awt.datatransfer.StringSelection;
 
 public class CreatePullRequestGitURLAction extends BacklogGitURLAction {
     public CreatePullRequestGitURLAction() {
-        super("CreatePullRequest");
+        super("Create PullRequest");
     }
 
     public void actionPerformed(AnActionEvent event) {

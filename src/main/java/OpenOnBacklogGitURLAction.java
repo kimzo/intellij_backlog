@@ -6,7 +6,7 @@ import java.awt.datatransfer.StringSelection;
 
 public class OpenOnBacklogGitURLAction extends BacklogGitURLAction {
     public OpenOnBacklogGitURLAction() {
-        super("OpenAtBacklog");
+        super("Open On Backlog");
     }
 
     public void actionPerformed(AnActionEvent event) {

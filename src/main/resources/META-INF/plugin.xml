@@ -2,8 +2,8 @@
     <id>kimzo.BacklogPlugin</id>
     <name>Backlog Git Page</name>
     <vendor email="kimzo351@gmail.com" url="https://github.com/kimzo/intellij_backlog">kimzo</vendor>
-    <description>Backlog git page integration plugin. Open file / Create PullRequest at Backlog. https://backlog.com</description>
-    <change-notes>Initial release of the plugin.</change-notes>
+    <description>Backlog git page integration plugin. Open file / Create PullRequest on Backlog. https://backlog.com</description>
+    <change-notes>Fixed the popup menu text.</change-notes>
     <idea-version since-build="183"/>
 
     <extensions defaultExtensionNs="com.intellij">
@@ -19,7 +19,7 @@
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
 
             <!-- 実装したクラスとのマッピング -->
-            <action id="Backlog.OpenAtBacklog" class="OpenOnBacklogGitURLAction" text="Open at Backlog"
+            <action id="Backlog.OpenAtBacklog" class="OpenOnBacklogGitURLAction" text="Open on Backlog"
                     description="Illustrates how to plug an action in"/>
             <action id="Backlog.PullRequest" class="CreatePullRequestGitURLAction" text="Create PullRequest"
                     description="Illustrates how to plug an action in"/>
