@@ -77,8 +77,10 @@ abstract class BacklogGitURLAction extends AnAction {
         String branch = gitBranch.getName();
 
         if (urlType == URL_TYPE.COMMIT_FILE) {
-            int startLine = editor.getCaretModel().getLogicalPosition().line + 1;
-            return remoteUrl + "blob/" + branch + "/" + filePath + "#" + startLine;
+            int startLine = editor.getSelectionModel().getSelectionStartPosition().line + 1;
+            int endLine = editor.getSelectionModel().getSelectionEndPosition().line + 1;
+            String position = "#" + (startLine != endLine ? startLine + "-" + endLine : startLine);
+            return remoteUrl + "blob/" + branch + "/" + filePath + position;
         } else if (urlType == URL_TYPE.PULL_REQUEST) {
             try {
                 return remoteUrl + "pullRequests/add/master..." + URLEncoder.encode(branch, "utf-8");
