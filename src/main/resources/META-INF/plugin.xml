@@ -3,7 +3,7 @@
     <name>Backlog Git Page</name>
     <vendor email="kimzo351@gmail.com" url="https://github.com/kimzo/intellij_backlog">kimzo</vendor>
     <description>Backlog git page integration plugin. Open file / Create PullRequest on Backlog. https://backlog.com</description>
-    <change-notes>Fix path for not git root located projects.</change-notes>
+    <change-notes>Fix selected line numbers when codes are folded.</change-notes>
     <idea-version since-build="183"/>
 
     <extensions defaultExtensionNs="com.intellij">
