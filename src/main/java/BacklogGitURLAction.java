@@ -1,7 +1,7 @@
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
-import com.intellij.openapi.editor.Editor;
+import com.intellij.openapi.editor.*;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.vfs.VirtualFile;
@@ -15,6 +15,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Collection;
+import java.util.List;
 
 abstract class BacklogGitURLAction extends AnAction {
 
@@ -79,14 +80,22 @@ abstract class BacklogGitURLAction extends AnAction {
         // add sub  directory
         String subPath = "";
         String localGitRoot = gitRepository.getRoot().getPath();
-        if (viewBasePath.length() > localGitRoot.length()){
+        if (viewBasePath.length() > localGitRoot.length()) {
             subPath = viewBasePath.substring(localGitRoot.length() + 1) + "/";
         }
 
 
         if (urlType == URL_TYPE.COMMIT_FILE) {
-            int startLine = editor.getSelectionModel().getSelectionStartPosition().line + 1;
-            int endLine = editor.getSelectionModel().getSelectionEndPosition().line + 1;
+            CaretModel caretModel = editor.getCaretModel();
+            List<CaretState> caretStates = caretModel.getCaretsAndSelections();
+            int startLine, endLine;
+            if (caretStates.size() < 1) {
+                startLine = endLine = caretModel.getLogicalPosition().line + 1;
+            } else {
+                CaretState caretState = caretStates.get(0);
+                startLine = caretState.getSelectionStart().line + 1;
+                endLine = caretState.getSelectionEnd().line + 1;
+            }
             String position = "#" + (startLine != endLine ? startLine + "-" + endLine : startLine);
             return remoteUrl + "blob/" + branch + "/" + subPath + filePath + position;
         } else if (urlType == URL_TYPE.PULL_REQUEST) {
