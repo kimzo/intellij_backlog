@@ -53,7 +53,7 @@ abstract class BacklogGitURLAction extends AnAction {
                 .replace(viewBasePath + "/", "");
 
         GitRepositoryManager repositoryManager = GitUtil.getRepositoryManager(project);
-        GitRepository gitRepository = repositoryManager.getRepositoryForFile(file);
+        GitRepository gitRepository = repositoryManager.getRepositoryForFileQuick(file);
         if (gitRepository == null)
             return null;
         GitBranch gitBranch = gitRepository.getCurrentBranch();
