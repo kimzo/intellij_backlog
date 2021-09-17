@@ -4,7 +4,7 @@
     <vendor email="kimzo351@gmail.com" url="https://github.com/kimzo/intellij_backlog">kimzo</vendor>
     <description>Backlog git page integration plugin. Open file / Create PullRequest on Backlog. https://backlog.com</description>
     <change-notes>Fix fail to open with intellij 2021.2</change-notes>
-    <idea-version since-build="183"/>
+    <idea-version since-build="201"/>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
