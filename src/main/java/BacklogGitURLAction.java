@@ -36,7 +36,7 @@ abstract class BacklogGitURLAction extends AnAction {
                         && editor != null
         );
         e.getPresentation().setIcon(IconLoader.getIcon(
-                "/backlog_icon.svg", this.getClass()));
+                "/icons/blg_icon2.svg", this.getClass()));
     }
 
     public String getUrl(AnActionEvent event, URL_TYPE urlType) {

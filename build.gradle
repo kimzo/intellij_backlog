@@ -4,9 +4,9 @@ plugins {
 }
 
 group 'kimzo'
-version '1.0.6'
+version '1.0.7'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     mavenCentral()
