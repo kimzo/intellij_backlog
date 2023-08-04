@@ -7,7 +7,6 @@
     <idea-version since-build="203"/>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow icon="/icons/blg_icon2.svg" />
     </extensions>
 
     <actions>
