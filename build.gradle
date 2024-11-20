@@ -1,25 +1,29 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.4.8'
+    id "org.jetbrains.intellij" version "1.17.4"
+}
+
+intellij {
+    version = '2022.2'
+    plugins = ['git4idea']
+    updateSinceUntilBuild = false
 }
 
 group 'kimzo'
-version '1.0.8'
+version '1.1.0'
 
-sourceCompatibility = 11
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
 
-intellij {
-    version '2018.3.5'
-    plugins = ['git4idea']
-    intellij.updateSinceUntilBuild false
-}
+
 patchPluginXml {
 }

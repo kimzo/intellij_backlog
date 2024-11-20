@@ -4,7 +4,7 @@
     <vendor email="kimzo351@gmail.com" url="https://github.com/kimzo/intellij_backlog">kimzo</vendor>
     <description>Backlog git page integration plugin. Open file / Create PullRequest on Backlog. https://backlog.com</description>
     <change-notes>Change since-build version, java version and icon svg for update</change-notes>
-    <idea-version since-build="203"/>
+    <idea-version since-build="222"/>
 
     <extensions defaultExtensionNs="com.intellij">
     </extensions>

@@ -108,4 +108,9 @@ abstract class BacklogGitURLAction extends AnAction {
             return null;
         }
     }
+
+    @Override
+    public com.intellij.openapi.actionSystem.ActionUpdateThread getActionUpdateThread() {
+        return com.intellij.openapi.actionSystem.ActionUpdateThread.BGT;
+    }
 }
