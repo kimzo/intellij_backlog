@@ -2,8 +2,18 @@
     <id>kimzo.BacklogPlugin</id>
     <name>Backlog Git Page</name>
     <vendor email="kimzo351@gmail.com" url="https://github.com/kimzo/intellij_backlog">kimzo</vendor>
-    <description>Backlog git page integration plugin. Open file / Create PullRequest on Backlog. https://backlog.com</description>
-    <change-notes>Change since-build version, java version and icon svg for update</change-notes>
+    <description><![CDATA[
+You can open the <a href="https://backlog.com">Backlog</a>'s git page with one action.
+<br/>The support includes:
+<ul>
+  <li>open a repository page with the current file</li>
+  <li>create a pull request with the current branch</li>
+</ul>
+<br/>
+For more information visit the
+<a href="https://backlog.com/ja/blog/backlog_git_page_plugin/">release note</a>.
+]]> </description>
+    <change-notes>Change the since-build version and update libs.</change-notes>
     <idea-version since-build="222"/>
 
     <extensions defaultExtensionNs="com.intellij">
@@ -20,7 +30,7 @@
             <!-- 実装したクラスとのマッピング -->
             <action id="Backlog.OpenAtBacklog" class="OpenOnBacklogGitURLAction" text="Open on Backlog"
                     description="Illustrates how to plug an action in"/>
-            <action id="Backlog.PullRequest" class="CreatePullRequestGitURLAction" text="Create PullRequest"
+            <action id="Backlog.PullRequest" class="CreatePullRequestGitURLAction" text="Create Pull Request"
                     description="Illustrates how to plug an action in"/>
         </group>
 
